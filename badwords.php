@@ -3,6 +3,7 @@ $word = $_GET['word'];
 $text_area = $_GET['text_area'];
 $censored_word = str_replace($word,'***',$text_area);
 $text_length = strlen($text_area);
+$censored_length = strlen($censored_word);
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,6 @@ $text_length = strlen($text_area);
     <hr>
     <h3>Paragrafo Censurato</h3>
     <p><?=$censored_word?></p>
-    <p><i>il paragrafo era lungo <b><?=$text_length ?></b> caratteri</i></p>
+    <p><i>il paragrafo era lungo <b><?=$censored_length ?></b> caratteri</i></p>
 </body>
 </html>
